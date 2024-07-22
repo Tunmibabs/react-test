@@ -25,7 +25,7 @@ const AddJobPage = ({ addJobSubmit}) => {
              location,
              description,
              salary,
-             comapny: {
+             company: {
                 name: companyName,
                 description: companyDescription,
                 contactEmail,
