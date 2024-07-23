@@ -22,7 +22,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
 
     const submitForm = (e) => {
         e.preventDefault();
-        
+
         const UpdatedJob = {
             id,
              title,

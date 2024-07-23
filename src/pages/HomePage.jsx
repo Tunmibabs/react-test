@@ -3,8 +3,10 @@ import Hero from '../components/Hero'
 import HomeCards from '../components/HomeCards';
 import JobListings from '../components/JobListings';
 import ViewAllJobs from '../components/ViewAllJobs'
+import jobListing from '../components/JobListing';
 
 const HomePage = () => {
+
   return (
     <div>
       <Hero />

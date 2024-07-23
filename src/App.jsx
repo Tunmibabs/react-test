@@ -8,7 +8,6 @@ import JobPage, { jobLoader } from './pages/JobPage';
 import AddJobPage from './pages/AddJobPage';
 import EditJobPage from './pages/EditJobPage';
 
-
 function App() {
   //Add new job
   const addJob = async (newJob) => {
@@ -54,7 +53,9 @@ function App() {
       )
   );
 
-  return <RouterProvider router={router} />
+  return (
+    <RouterProvider router={router} />
+  );
 }
 
 export default App
