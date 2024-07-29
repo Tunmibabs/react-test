@@ -7,6 +7,7 @@ import NotFoundPage from './pages/NotFoundPage'
 import JobPage, { jobLoader } from './pages/JobPage';
 import AddJobPage from './pages/AddJobPage';
 import EditJobPage from './pages/EditJobPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   //Add new job
@@ -54,7 +55,10 @@ function App() {
   );
 
   return (
-    <RouterProvider router={router} />
+    <>
+        <RouterProvider router={router} />
+    </>
+
   );
 }
 

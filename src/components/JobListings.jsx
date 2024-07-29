@@ -37,7 +37,6 @@ const JobsListings = ({ isHome = false }) => {
               ))}
               </>
             )}
-
           </div>
     </div>
   </section>
