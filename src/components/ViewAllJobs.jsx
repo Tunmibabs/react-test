@@ -6,21 +6,20 @@ import Modal from 'react-bootstrap/Modal';
 import JobsListings from '../components/JobListings'
 
 const ViewAllJobs = () => {
-    const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
-  
-    function handleShow(breakpoint) {
-      setFullscreen(breakpoint);
-      setShow(true);
-    }
 
   return (
     <div className="flex justify-center">
-      <Button className="flex justify-center items-center bg-black text-white text-center py-3 px-9 rounded-xl hover:bg-gray-700" onClick={() => handleShow(true)}>
+      <Button className="flex justify-center items-center bg-black text-white text-center py-3 px-9 rounded-xl hover:bg-gray-700" onClick={() => setShow(true)}>
           View All Jobs
         </Button>
 
-      <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+      <Modal 
+      show={show} 
+      onHide={() => setShow(false)}
+      size='xl'
+      dialogClassName="modal-90w"
+      aria-labelledby="example-custom-modal-styling-title">
         <Modal.Header closeButton></Modal.Header>
         <JobsListings/>
       </Modal>

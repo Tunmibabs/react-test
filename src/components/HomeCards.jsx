@@ -16,6 +16,7 @@ const HomeCards = ({ addJobSubmit }) => {
   const [companyDescription, setCompanyDescription] = useState('');
   const [contactEmail, setContactEmail] = useState('');
   const [contactPhone, setContactPhone] = useState('');
+  
 
   const [show, setShow] = useState(false);
 

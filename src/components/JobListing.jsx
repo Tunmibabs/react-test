@@ -5,13 +5,7 @@ import { Link } from 'react-router-dom';
 import { Button, Modal } from 'react-bootstrap';
 
 const jobListing = ({ job }) => {
-  const [fullscreen, setFullscreen] = useState(true);
   const [show, setShow] = useState(false);
-
-  function handleShow(breakpoint) {
-    setFullscreen(breakpoint);
-    setShow(true);
-  }
 
   const [showFullDescription, setshowFullDescription] = useState(true);
 
@@ -44,9 +38,14 @@ const jobListing = ({ job }) => {
                   {job.location}
                 </div>
                 <Button
-                  className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm" onClick={() => handleShow(true)}
+                  className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm" onClick={() => setShow(true)}
                 >Read More</Button>
-                <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+                <Modal show={show} 
+                onHide={() => setShow(false)}
+                size='xl'
+                dialogClassName='modal-100w'
+                aria-labelledby='example-custom-modal-styling-title'
+                >
                 <Modal.Header closeButton></Modal.Header>
     <section className="bg-indigo-50">
       <div className="container m-auto py-10 px-6">
